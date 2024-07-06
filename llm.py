@@ -15,8 +15,16 @@ llm = AzureChatOpenAI(
     azure_endpoint=azure_endpoint, 
 )
 
-num = input("How many images would you like to generate?")
+# User input for number of lines
+num = 0
+while not (1 <= int(num) <= 10):
+    num = input("How many images would you like to generate? Range 1 - 10\n")
 
+
+# User input to enter the story
+user_story = input("Please type in the story you want to create illustrations for.\n")
+while len(user_story) <= 100:
+    user_story = input("Please enter a longer story.\n")
 
 prompt = ChatPromptTemplate.from_messages(
     [
@@ -27,7 +35,7 @@ prompt = ChatPromptTemplate.from_messages(
 
 chain = prompt | llm
 
-response = chain.invoke({"input" : "On a stormy night, Lily found an old, dusty key hidden in her grandmother's attic. Curiosity piqued, she unlocked a forgotten trunk, revealing a map to buried treasure. With a determined heart and a flashlight, she embarked on an adventure, discovering not gold, but her family's lost legacy."})
+response = chain.invoke({"input" : user_story})
 
 response_text = response.content
 response_text = response_text.split("\n")
