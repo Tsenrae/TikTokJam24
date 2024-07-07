@@ -9,15 +9,13 @@ This application generates images based on a user-provided story using OpenAI's 
 - Python 3.6 or higher
 - Google Chrome browser
 - Git
+- Azure API Key from OpenAI
 
 ### Installation
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
-    ```
+    Clone the repo and follow the instructions below to set up.
 
 2. **Create a virtual environment and activate it:**
 
@@ -41,8 +39,8 @@ This application generates images based on a user-provided story using OpenAI's 
 5. **Open the `.env` file and add your API keys and other environment variables:**
 
     ```bash
-    AZURE_API_KEY=your_azure_api_key
-    AZURE_ENDPOINT=your_azure_endpoint
+    AZURE_API_KEY='replace_with_your_azure_api_key'
+    AZURE_ENDPOINT='replace_with_your_azure_endpoint'
     ```
 
 ### Running the Application
@@ -53,7 +51,7 @@ This application generates images based on a user-provided story using OpenAI's 
     python app.py
     ```
 
-2. **Open your browser and navigate to `http://localhost:5000`.**
+2. **Open your browser (Google Chrome recommended) and navigate to `http://localhost:5000`.**
 
 3. **Follow the instructions on the webpage to generate images based on your story.**
 
@@ -68,3 +66,7 @@ This application generates images based on a user-provided story using OpenAI's 
   - `instructions.html`: Instructions for logging into Bing.
   - `display_images.html`: Displays the generated images.
 - `.env.example`: Example environment file to help users set up their own `.env`.
+
+### Acknowledgements
+
+### Licenses
