@@ -1,6 +1,20 @@
 # Story Image Generator
 
-This application generates images based on a user-provided story using OpenAI's GPT model and Bing Image Creator. 
+## Motivation
+Our group understands the pains of creating eye-catching illustrations to accompany literary masterpieces. The process of transforming words into compelling visuals is both time-consuming and often requires a high level of artistic skill. For authors and content creators, this can be a significant barrier, potentially limiting the impact and reach of their work.
+
+We believe that every story deserves to be brought to life with stunning visuals that captivate the audience and enhance the narrative experience. Our project aims to simplify the creation of illustrations, enabling writers to effortlessly generate beautiful images that complement and elevate their literary creations.
+
+By leveraging advanced AI technologies, we provide an innovative solution that bridges the gap between text and imagery. Our tool empowers authors to focus on their storytelling while seamlessly generating illustrations that resonate with their readers, making the process of creating illustrated literary works more accessible and enjoyable.
+
+## Functionality
+This application generates images based on a user-provided story by leveraging OpenAI's GPT model and Bing Image Creator accessed via a reversed engineered API.
+
+- Story to Prompts: The OpenAI GPT model is used to analyse the user-provided story and generate concise, descriptive prompts that are then used for image generation. These prompts capture key scenes and elements of the story to ensure that the generated images accurately reflect the narrative.
+
+- Image Generation: The generated prompts are then passed to the Bing Image Creator via its API. High-quality images based on the provided prompts.
+
+- Displaying Results: The resulting images are displayed, providing visually compelling illustrations that complement and enhance the original story. The authors can then use the imagesto complement their works.
 
 ## Setup
 

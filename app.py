@@ -68,7 +68,7 @@ def check_login():
         driver.quit()
         return redirect(url_for('generate_images', u_cookie=u_cookie, srchhpgusr_cookie=SRCHHPGUSR_cookie))
     else:
-        return "Please log in to Bing."
+        return "Please refresh once you have logged into Bing.com . The images may take a while to generate."
 
 @app.route('/generate_images')
 def generate_images():
