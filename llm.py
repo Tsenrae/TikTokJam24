@@ -48,7 +48,7 @@ response = chain.invoke({"input" : user_story})
 
 response_text = response.content
 response_text = response_text.split("\n")
-response_text = [item.split('. ', 1)[1] if '. ' in item else item for item in response_text]
+response_text = [item.split('. ', 1)[1].replace(' ', '+').replace("'", '+').replace(":", "+") if '. ' in item else item for item in response_text]
 
 print(response_text)
 
@@ -82,8 +82,9 @@ driver.quit()
 image_gen = BingImageCreator.ImageGen(u_cookie, SRCHHPGUSR_cookie)
 
 for prompt in response_text:
-    print(image_gen.get_images(prompt))
-
+    normal_image_links = image_gen.get_images(prompt)
+    normal_image_links = [i for i in normal_image_links if ".js" not in i and ".svg" not in i]
+    print(normal_image_links)
 
 '''# Function to generate images using the DALL-E-3 model
 def generate_images(prompt, api_key):
