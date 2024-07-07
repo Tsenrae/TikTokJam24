@@ -81,9 +81,10 @@ def generate_images():
     for prompt in prompts:
         normal_image_links = image_gen.get_images(prompt)
         normal_image_links = [i for i in normal_image_links if ".js" not in i and ".svg" not in i]
-        image_links.append(normal_image_links)
+        if normal_image_links:
+            image_links.append(normal_image_links[0])  # Get the first image URL for each prompt
 
-    return jsonify({"image_links": image_links})
+    return render_template('display_images.html', image_links=image_links)
 
 if __name__ == '__main__':
     app.run(debug=True)

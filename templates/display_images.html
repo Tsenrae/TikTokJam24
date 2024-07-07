@@ -1,16 +1,12 @@
-<!-- instructions.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructions</title>
+    <title>Generated Images</title>
     <style>
-        /* Optional CSS styling */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             padding: 20px;
             background-color: #f0f0f0;
         }
@@ -24,22 +20,29 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: #333;
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        p {
-            color: #666;
-        }
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Instructions on how to continue</h1>
-        <p>You will be redirected to bing.com website. Please press Continue to proceed and login to bing.com.</p>
-        <form action="/submit" method="post">
-            <input type="submit" value="Continue">
-        </form>
+        <h1>Generated Images</h1>
+        <div class="image-container">
+            {% for link in image_links %}
+            <img src="{{ link }}" alt="Generated Image">
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
