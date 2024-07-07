@@ -68,5 +68,6 @@ This application generates images based on a user-provided story using OpenAI's 
 - `.env.example`: Example environment file to help users set up their own `.env`.
 
 ### Acknowledgements
-
-### Licenses
+This project makes use of the following third-party library:
+- [Bing Image Creator](https://github.com/acheong08/BingImageCreator) - The use of their API to access Bing's AI image generator.
+- [OpenAI](https://www.openai.com) - The use in code for generating text prompts based on the story input.
